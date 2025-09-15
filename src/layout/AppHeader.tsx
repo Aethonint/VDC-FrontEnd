@@ -290,7 +290,7 @@ const AppHeader: React.FC = () => {
   <input
   ref={inputRef}
   type="text"
-  placeholder="Search or type command..."
+  placeholder="Find vehicle, system setting…"
   className="
     h-11 w-full max-w-full sm:max-w-md lg:max-w-lg xl:max-w-xl
     rounded-lg border border-gray-500
@@ -331,7 +331,7 @@ const AppHeader: React.FC = () => {
             {/* <!-- Notification Menu Area --> */}
           </div>
            {/* User Area  */}
-          <UserDropdown /> 
+          {/* <UserDropdown />  */}
         </div>
       </div>
     </header>

@@ -66,7 +66,7 @@ export default function ActiveDefects() {
                 "Defect Type",
                 "Reported By",
                 "Priority",
-                "Notes/Images",
+                "Status",
                 "Action",
               ].map((header, i) => (
                 <TableCell
@@ -126,14 +126,17 @@ export default function ActiveDefects() {
                 {/* Notes/Images */}
                <TableCell className="px-5 py-4 text-center">
                   <button className="text-xs px-4 py-1.5 bg-[#002B66] text-white rounded hover:bg-[#00357a] transition">
-                    View
+                    Open
                   </button>
                 </TableCell>
 
                 {/* Action */}
                 <TableCell className="px-5 py-4 text-center">
-                  <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+                  {/* <button className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
                     Mark Resolved
+                  </button> */}
+                      <button className="text-xs px-4 py-1.5 bg-[#002B66] text-white rounded hover:bg-[#00357a] transition">
+                    View
                   </button>
                 </TableCell>
               </TableRow>

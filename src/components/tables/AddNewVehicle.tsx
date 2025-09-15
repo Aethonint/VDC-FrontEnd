@@ -61,29 +61,42 @@ export default function AddNewVehicle() {
             </div>
 
             {/* Vehicle Color */}
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-3">
-                Vehicle Color:
-              </label>
-              <div className="flex flex-wrap gap-3">
-                {[
-                  "bg-red-500",
-                  "bg-black",
-                  "bg-blue-800",
-                  "bg-pink-600",
-                  "bg-orange-500",
-                  "bg-gray-500",
-                  "bg-red-900",
-                ].map((color, i) => (
-                  <div
-                    key={i}
-                    className={`w-10 h-10 rounded-full cursor-pointer border border-gray-200 hover:border-[#002B66] hover:scale-110 transition`}
-                  >
-                    <div className={`w-full h-full rounded-full ${color}`} />
-                  </div>
-                ))}
-              </div>
-            </div>
+{/* Vehicle Color */}
+<div>
+  <label className="block text-sm font-semibold text-gray-700 mb-3">
+    Vehicle Color:
+  </label>
+  <div className="flex flex-wrap gap-3 items-center">
+    {[
+      "bg-red-500",
+      "bg-black",
+      "bg-blue-800",
+      "bg-pink-600",
+      "bg-orange-500",
+      "bg-gray-500",
+      "bg-red-900",
+    ].map((color, i) => (
+      <div
+        key={i}
+        className={`w-10 h-10 rounded-full cursor-pointer border border-gray-200 hover:border-[#002B66] hover:scale-110 transition`}
+      >
+        <div className={`w-full h-full rounded-full ${color}`} />
+      </div>
+    ))}
+
+    {/* Custom Color Picker */}
+    <div className="relative w-10 h-10">
+      <input
+        type="color"
+        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+      />
+      <div className="w-full h-full rounded-full border-2 border-dashed border-gray-400 flex items-center justify-center text-gray-400 hover:border-[#002B66] hover:text-[#002B66] hover:scale-110 transition">
+        +
+      </div>
+    </div>
+  </div>
+</div>
+
 
             {/* Submit */}
             <div className="pt-4">
