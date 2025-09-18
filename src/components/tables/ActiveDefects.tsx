@@ -12,7 +12,7 @@ interface Defect {
   id: number;
   vehicleRegNo: string;
   dateReported: string;
-  defectType: string;
+  defects: string;
   reportedBy: string;
   priority: "High" | "Medium" | "Low";
 }
@@ -22,7 +22,7 @@ const defects: Defect[] = [
     id: 1,
     vehicleRegNo: "AB12 CDE",
     dateReported: "2025-08-10",
-    defectType: "Brake Failure",
+    defects: "2 Defects",
     reportedBy: "James Foster",
     priority: "High",
   },
@@ -30,7 +30,7 @@ const defects: Defect[] = [
     id: 2,
     vehicleRegNo: "XY34 ZRT",
     dateReported: "2025-08-12",
-    defectType: "Headlight Issue",
+    defects: "4 Defects",
     reportedBy: "Aisha Khan",
     priority: "Medium",
   },
@@ -38,7 +38,7 @@ const defects: Defect[] = [
     id: 3,
     vehicleRegNo: "LM5B TUV",
     dateReported: "2025-08-15",
-    defectType: "Flat Tire",
+    defects: "5 Defects",
     reportedBy: "Ben Thompson",
     priority: "Low",
   },
@@ -46,7 +46,7 @@ const defects: Defect[] = [
     id: 4,
     vehicleRegNo: "GH78 QWE",
     dateReported: "2025-08-20",
-    defectType: "Engine Noise",
+    defects: "4 Defects",
     reportedBy: "Olivia Smith",
     priority: "High",
   },
@@ -63,7 +63,7 @@ export default function ActiveDefects() {
               {[
                 "Vehicle Reg No.",
                 "Date Reported",
-                "Defect Type",
+                "Defect(s)",
                 "Reported By",
                 "Priority",
                 "Status",
@@ -99,7 +99,7 @@ export default function ActiveDefects() {
 
                 {/* Defect Type */}
                 <TableCell className="px-5 py-4 text-center text-sm text-gray-700">
-                  {defect.defectType}
+                  {defect.defects}
                 </TableCell>
 
                 {/* Reported By */}
